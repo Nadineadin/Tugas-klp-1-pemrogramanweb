@@ -1,10 +1,12 @@
+<!-- HEADER PEMBUKA -->
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <meta charset="utf-8" />
-    <title>Ekstrakurikuler - SMA Negeri 9 Makassar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMAN 9 Makassar</title>
 
+    <!-- Bootstrap & Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,17 +15,22 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark">
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm py-3">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="foto/lambang.png" width="40" alt="logo" class="me-2" />
+          <img
+            src="images/lainnya/lambang.png"
+            width="40"
+            alt="logo"
+            class="me-2"
+          />
           <span class="fw-bold">SMAN 9 Makassar</span>
         </a>
-
         <button
           class="navbar-toggler"
           type="button"
@@ -34,7 +41,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto fw-semibold">
             <li class="nav-item">
               <a class="nav-link" href="index.html">HOME</a>
             </li>
@@ -47,7 +54,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kontak.html">KONTAK & JAM PELAYANAN</a>
+              <a class="nav-link" href="kontak.html">KONTAK</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about_us.html">ABOUT US</a>
@@ -57,86 +64,161 @@
       </div>
     </nav>
 
+    <!-- HEADER PENUTUP -->
+
     <main class="container my-5">
-      <div class="text-center mb-4">
-        <h1>Ekstrakurikuler</h1>
-        <p class="lead">
-          SMA Negeri 9 Makassar memiliki berbagai kegiatan ekstrakurikuler untuk
-          mengembangkan minat dan bakat siswa.
-        </p>
-      </div>
+      <div class="container-main fade-in">
+        <!-- Header Halaman -->
+        <div class="text-center mb-5">
+          <i class="bi bi-trophy-fill text-primary fs-1 d-block mb-2"></i>
+          <h1 class="fw-bold">Ekstrakurikuler</h1>
+          <p class="text-muted">
+            SMA Negeri 9 Makassar memiliki berbagai kegiatan ekstrakurikuler
+            yang membantu siswa mengembangkan minat, bakat, serta jiwa
+            kepemimpinan.
+          </p>
+          <hr
+            class="mx-auto"
+            style="width: 120px; border-top: 3px solid #0d6efd"
+          />
+        </div>
 
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card card-custom p-3">
-            <h3>Organisasi Siswa Intra Sekolah (OSIS)</h3>
-            <p>
-              OSIS adalah wadah utama bagi siswa untuk belajar berorganisasi,
-              memimpin, dan melatih tanggung jawab dalam kegiatan sekolah.
-            </p>
-            <div class="text-center">
-              <img src="foto/osis.jpg" alt="OSIS" width="300" />
+        <!-- Daftar Ekstrakurikuler -->
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card shadow-sm border-0 h-100 zoom-img">
+              <img
+                src="images/fasilitas/osis.jpg"
+                class="card-img-top rounded-top"
+                alt="OSIS"
+              />
+              <div class="card-body">
+                <h3 class="card-title fw-semibold text-primary">
+                  OSIS (Organisasi Siswa Intra Sekolah)
+                </h3>
+                <p class="card-text">
+                  OSIS adalah wadah utama bagi siswa untuk belajar
+                  berorganisasi, memimpin, serta melatih tanggung jawab dalam
+                  berbagai kegiatan sekolah.
+                </p>
+                <button
+                  class="btn btn-outline-primary mt-2"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#osisKegiatan"
+                >
+                  Lihat Kegiatan
+                </button>
+                <div id="osisKegiatan" class="collapse mt-3">
+                  <ul>
+                    <li>Peringatan Hari Besar Nasional</li>
+                    <li>Pensi dan Class Meeting</li>
+                    <li>Program Bakti Sosial</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card shadow-sm border-0 h-100 zoom-img">
+              <img
+                src="images/fasilitas/uks.jpg"
+                class="card-img-top rounded-top"
+                alt="PMR"
+              />
+              <div class="card-body">
+                <h3 class="card-title fw-semibold text-danger">
+                  Palang Merah Remaja (PMR)
+                </h3>
+                <p class="card-text">
+                  PMR berfokus pada kegiatan kemanusiaan, pelatihan pertolongan
+                  pertama, serta pengembangan empati dan solidaritas sosial
+                  antar siswa.
+                </p>
+                <button
+                  class="btn btn-outline-danger mt-2"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#prestasiPMR"
+                >
+                  Lihat Prestasi
+                </button>
+                <div id="prestasiPMR" class="collapse mt-3">
+                  <ul>
+                    <li>Juara 1 PP YRCC 2023</li>
+                    <li>Juara Umum 1 Wirafest 2022</li>
+                    <li>Juara Favorit 1 PP YRCC 2024</li>
+                  </ul>
+                  <div class="text-center mt-3">
+                    <img
+                      src="images/prestasi/prestasi pmr.jpg"
+                      alt="Prestasi PMR"
+                      class="img-fluid rounded shadow-sm"
+                      width="300"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6">
-          <div class="card card-custom p-3">
-            <h3>Palang Merah Remaja (PMR)</h3>
-            <p>
-              PMR berfokus pada kegiatan kemanusiaan, pertolongan pertama, dan
-              pelatihan kedisiplinan serta kepedulian sosial bagi siswa.
-            </p>
-            <div class="text-center">
-              <img src="foto/uks.jpg" alt="PMR" width="300" />
+        <!-- Prestasi Siswa -->
+        <hr class="my-5" />
+        <div class="card border-0 shadow-sm fade-in">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-5 text-center p-3">
+              <img
+                src="images/prestasi/prestasi.jpg"
+                class="img-fluid rounded shadow-sm"
+                alt="Prestasi"
+              />
             </div>
-
-            <h4 class="mt-3">Prestasi PMR</h4>
-            <ul>
-              <li>Juara 1 PP YRCC 2023</li>
-              <li>Juara umum 1 Wirafest 2022</li>
-              <li>Juara favorit 1 PP YRCC 2024</li>
-            </ul>
-            <div class="text-center">
-              <img src="foto/prestasi pmr.jpg" alt="Prestasi PMR" width="300" />
+            <div class="col-md-7 p-4">
+              <h3 class="fw-bold text-success mb-3">Prestasi Siswa</h3>
+              <p>
+                Beberapa prestasi membanggakan yang telah diraih siswa SMAN 9
+                Makassar:
+              </p>
+              <ol class="ps-3">
+                <li>Juara 3 Lomba Puisi.</li>
+                <li>Juara 3 Lomba Esai "Peringatan Hari Jadi Sul-Sel 2024".</li>
+                <li>Juara 1 Podcast EBS Fair Competition 2022.</li>
+                <li>
+                  Salwa Nabilah - Best Intelegensia Duta Remaja Sulawesi Selatan
+                  2022.
+                </li>
+                <li>Salwa Nabilah - RU 1 Puteri Duta Pelajar Makassar 2022.</li>
+                <li>Juara 1 Marinesia Journalist Competition 2022.</li>
+              </ol>
             </div>
           </div>
-        </div>
-      </div>
-      <hr />
-      <h3>Prestasi Siswa</h3>
-      <div class="row">
-        <div class="col-md-8">
-          <ol>
-            <li>Juara 3 Lomba Puisi.</li>
-            <li>Juara 3 Lomba Esai "Peringatan Hari jadi SUL-SEL 2024".</li>
-            <li>Juara 1 Lomba Podcast pada EBS FAIR COMPETITION 2022.</li>
-            <li>
-              Salwa Nabilah - Best Intelegensia Duta Remaja Sulawesi Selatan
-              2022
-            </li>
-            <li>Salwa Nabilah - RU 1 Puteri Duta Pelajar Makassar 2022</li>
-            <li>Juara 1 Lomba Marinesia Journalist Competition 2022</li>
-          </ol>
-        </div>
-        <div class="col-md-4 text-center">
-          <img src="foto/prestasi.jpg" alt="Prestasi" width="300" />
         </div>
       </div>
     </main>
 
-    <footer class="site-footer text-center">
+    <!--  FOOTER PEMBUKA  -->
+    <button id="backToTop" class="btn btn-primary rounded-circle">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    <!-- Footer -->
+    <footer class="text-center py-4 text-white mt-5">
       <div class="container">
         <img
-          src="foto/lambang.png"
+          src="images/lainnya/lambang.png"
           alt="Logo Sekolah"
-          width="50"
+          width="45"
           class="me-2"
         />
-        &copy; 2025 Kelompok 1 Pemrograman Web | SMA Negeri 9 Makassar
+        <p class="mb-0">
+          &copy; 2025 Kelompok 1 Pemrograman Web | SMA Negeri 9 Makassar
+        </p>
       </div>
     </footer>
 
+    <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
+<!-- FOOTER PENUTUP -->

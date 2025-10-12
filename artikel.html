@@ -1,60 +1,53 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pengenalan Diri | Nadine Patulak</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap Icon (optional for aesthetic touch) -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
-    <!-- Google Font untuk header -->
+    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-  </head>
-  <body class="about-page bg-light">
-    <header class="py-4 text-center bg-white shadow-sm">
-      <h1 class="header-title mb-0">
-        <i class="bi bi-person-heart me-2"></i>Pengenalan Diri
-      </h1>
-    </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="container about-wrapper py-4">
-      <!-- FOTO + DATA DIRI -->
-      <div
-        class="about-top d-flex flex-wrap align-items-start justify-content-center gap-4 mb-5"
-      >
-        <!-- Foto -->
-        <div class="about-photo position-relative">
-          <img
-            class="about-main-img rounded-4 shadow-lg"
-            src="nadin.jpg"
-            alt="Foto Nadine"
-          />
-          <img
-            class="about-ribbon-img ribbon-top-left"
-            src="ribbon.png"
-            alt="Pita"
-          />
-        </div>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="css/styleaboutus.css" />
+ <div class="container">
+        <!-- Pengenalan Diri - FOTO KIRI, BIODATA KANAN -->
+        <div class="content-card">
+          <h2 class="section-title">
+            <i class="bi bi-person-badge"></i> Pengenalan Diri
+          </h2>
+
+          <div class="row align-items-stretch g-4">
+            <!-- FOTO DI KIRI -->
+            <div class="col-md-6 col-lg-6">
+              <div
+                class="profile-photo h-100 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="images/mahasiswa/nadin.jpg"
+                  alt="Foto Nadine Patulak"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
 
         <!-- Biodata -->
-        <div class="col-md-6">
-          <div class="card border-0 shadow-sm rounded-4 p-4">
-            <h2 class="fs-4 fw-semibold text-primary mb-3 text-center">
-              Data Diri
+        <div class="col-md-6 col-lg-6">
+              <div class="profile-box">
             </h2>
             <p><strong>Nama:</strong> Nadine Patulak</p>
             <p><strong>NIM:</strong> 240209501085</p>
@@ -68,28 +61,22 @@
               <strong>Asal Sekolah:</strong>
               <mark>SMA Negeri 2 Toraja Utara</mark>
             </p>
-            <pre
-              class="bg-light border-start border-4 border-primary p-3 rounded-3"
-            >
-Motto:
-Kamu tidak akan tahu kalau
-   kamu tidak pernah
-      mencoba
-            </pre>
+            </div>
+            <div class="motto-box">
+                <i class="bi bi-quote" style="font-size: 2rem"></i>
+                <p class="mt-3 mb-0">
+                  Kamu tidak akan tahu kalau kamu tidak pernah mencoba
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- PENGALAMAN -->
-      <section class="mb-5">
-        <h2 class="text-primary fw-bold text-center mb-3">
-          Pengalaman Selama Kuliah
-        </h2>
-        <div class="col-md-9 mx-auto">
-          <div class="card border-0 shadow-sm rounded-4 p-4">
-            <h3 class="fs-5 text-secondary text-center mb-3">
-              Apa yang Saya Dapatkan Selama Kuliah di PTIK
-            </h3>
+      <!-- Pengalaman -->
+        <div class="content-card">
+          <h2 class="section-title">
+            <i class="bi bi-journal-text"></i> Pengalaman
+          </h2>
+          <div class="experience-text">
             <p>
               Selama saya kuliah di PTIK, saya bertemu dengan banyak teman yang
               memiliki pemikiran berbeda-beda karena kami berasal dari daerah
@@ -97,7 +84,7 @@ Kamu tidak akan tahu kalau
               menghargai pendapat orang lain, dan beradaptasi dengan berbagai
               karakter.
             </p>
-            <p>
+            <p class="mt-3">
               Selain itu, saya mendapatkan banyak pengalaman melalui kegiatan
               praktikum, kerja kelompok, dan presentasi di kelas. Dari
               pengalaman tersebut, saya belajar meningkatkan kemampuan
@@ -106,59 +93,70 @@ Kamu tidak akan tahu kalau
             </p>
           </div>
         </div>
-      </section>
 
-      <!-- MATA KULIAH FAVORIT -->
-      <section class="mb-5">
-        <h2 class="text-primary fw-bold text-center mb-3">
-          Mata Kuliah Favorit
-        </h2>
-        <div class="col-md-6 mx-auto">
-          <ol
-            class="list-group list-group-numbered shadow-sm rounded-4 overflow-hidden"
-          >
-            <li class="list-group-item">Algoritma dan Pemrograman Dasar</li>
-            <li class="list-group-item">Struktur Data</li>
-            <li class="list-group-item">Basis Data</li>
-            <li class="list-group-item">Pemrograman Web</li>
-            <li class="list-group-item">Matematika Dasar</li>
-          </ol>
+       <div class="content-card">
+          <h2 class="section-title">
+            <i class="bi bi-star-fill"></i> Mata Kuliah Favorit
+          </h2>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <ol class="list-group list-group-numbered">
+                <li class="list-group-item">Perkembangan Peserta Didik</li>
+                <li class="list-group-item">Struktur Data</li>
+                <li class="list-group-item">Algoritma dan Pemrograman Dasar</li>
+                <li class="list-group-item">Pemrograman Web</li>
+                <li class="list-group-item">Matematika Dasar</li>
+              </ol>
+            </div>
+          </div>
         </div>
-      </section>
-
       <!-- DOSEN PENGAMPU -->
-      <section class="mb-5">
-        <h2 class="text-primary fw-bold text-center mb-3">Dosen Pengampu</h2>
-        <div class="col-md-6 mx-auto">
-          <ul class="list-group shadow-sm rounded-4 overflow-hidden">
-            <li class="list-group-item">
-              Dyah Darma Andayani, S.T., M.Tel.Eng
-            </li>
-            <li class="list-group-item">
-              Prof. Dr. Ir. Riana Tangkin Mangesa, M.T
-            </li>
-            <li class="list-group-item">Alifya NFH, S.Pd., M.Pd.</li>
-            <li class="list-group-item">Wahyu Hidayat M, S.Pd., M.Pd.</li>
-            <li class="list-group-item">Kurnia Wahyu Prima, S.Pd., M.Pd.T</li>
-            <li class="list-group-item">
-              Haekal Febriansyah Ramadhan, S.T., M.T., M.Pd.
-            </li>
-            <li class="list-group-item">
-              Muhammad Romario Basirung, S.Pd., M.Pd.
-            </li>
-          </ul>
+      <div class="content-card">
+          <h2 class="section-title"><i class="bi bi-people-fill"></i> Dosen</h2>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <i class="bi bi-person-check-fill text-primary"></i> Dyah
+                  Darma Andayani, S.T., M.Tel.Eng
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-person-check-fill text-primary"></i> Prof. Dr.
+                  Ir. Riana Tangkin Mangesa, M.T
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-person-check-fill text-primary"></i> Alifya
+                  NFH, S.Pd., M.Pd.
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-person-check-fill text-primary"></i> Wahyu
+                  Hidayat M, S.Pd., M.Pd.
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-person-check-fill text-primary"></i> Kurnia
+                  Wahyu Prima, S.Pd., M.Pd.T
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-person-check-fill text-primary"></i> Haekal
+                  Febriansyah Ramadhan, S.T., M.T., M.Pd.
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-person-check-fill text-primary"></i> Muhammad
+                  Romario Basirung, S.Pd., M.Pd.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </section>
+
 
       <!-- TABEL -->
-      <section>
-        <h2 class="text-primary fw-bold text-center mb-3">Teman Satu Kelas</h2>
-        <div class="table-responsive col-md-10 mx-auto shadow-sm rounded-4">
-          <table
-            class="table table-bordered table-striped align-middle text-center mb-0"
-          >
-            <thead class="table-primary">
-              <tr>
+      <div class="content-card">
+          <h2 class="section-title"><i class="bi bi-table"></i> Kelompok 1</h2>
+          <div class="table-responsive">
+            <table class="table custom-table">
+              <thead>
+                <tr>
                 <th rowspan="2">No</th>
                 <th colspan="2">Nama</th>
                 <th rowspan="2">Jenis Kelamin</th>
@@ -198,15 +196,16 @@ Kamu tidak akan tahu kalau
             </tbody>
           </table>
         </div>
-      </section>
+      </div>
     </main>
 
     <!-- FOOTER -->
-    <footer
-      class="text-center mt-5 py-3 bg-dark text-white border-top border-primary"
-    >
-      <p class="mb-0">&copy; 2025 Nadine Patulak | PTIK F</p>
-    </footer>
+    <footer>
+        <div class="container">
+          <p>&copy; 2025 Kelompok 1 Pemrograman Web | SMA Negeri 9 Makassar</p>
+        </div>
+      </footer>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

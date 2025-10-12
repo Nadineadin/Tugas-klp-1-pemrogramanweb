@@ -1,140 +1,472 @@
 <!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andi Nurrizqah Hamdana</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengenalan Diri | Andi Nurrizqah Hamdana</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body class="about-page bg-light">
-    <header class="py-4 text-center bg-white shadow-sm">
-      <h1 class="header-title mb-0">Perkenalan Diri</h1>
-    </header>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
 
-    <main class="container about-wrapper py-4">
-      <div class="about-top d-flex flex-wrap align-items-start justify-content-center gap-4 mb-4">
-        <div class="about-photo position-relative">
-          <img class="about-main-img rounded-4 shadow-lg" src="Rizqah.jpg" alt="Rizqah" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      /* BG */
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    /* Overlay  */
+    .overlay {
+      background: linear-gradient(135deg, rgba(56, 135, 255, 0.9), rgba(10, 88, 202, 0.9));
+      min-height: 100vh;
+      padding: 20px 0;
+    }
+
+    /* Header Section */
+    .header-section {
+      text-align: center;
+      padding: 60px 0 40px;
+      color: white;
+    }
+
+    .header-section h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .header-section .subtitle {
+      font-size: 1.3rem;
+      font-weight: 300;
+      opacity: 0.95;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    /* Card Styling */
+    .content-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .content-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #667eea;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
+
+    /* Profile Photo Section */
+    .profile-photo {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .profile-photo img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .profile-photo img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Profile Box */
+    .profile-box {
+      background: linear-gradient(135deg, #7ee1ec 0%, #240dd1 100%);
+      color: white;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .profile-box p {
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+
+    .profile-box strong {
+      font-weight: 600;
+    }
+
+    .profile-box mark {
+      background-color: rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* Motto Box */
+    .motto-box {
+      background: linear-gradient(135deg, #7ee1ec 0%, #240dd1 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      margin-top: 15px;
+    }
+
+    /* Experience Text */
+    .experience-text {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: #333;
+      text-align: justify;
+    }
+
+    /* List Styling */
+    .list-group-item {
+      border: none;
+      border-left: 4px solid #667eea;
+      margin-bottom: 10px;
+      border-radius: 8px !important;
+      transition: all 0.3s ease;
+    }
+
+    .list-group-item:hover {
+      background-color: #f0f4ff;
+      border-left-color: #764ba2;
+      transform: translateX(5px);
+    }
+
+    .list-group-numbered .list-group-item::before {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      font-weight: 600;
+    }
+
+    /* Photo Section */
+    .photo-container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .photo-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .photo-container img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Table Styling */
+    .custom-table {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-table thead {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+    }
+
+    .custom-table th {
+      font-weight: 600;
+      padding: 15px;
+      border: none;
+    }
+
+    .custom-table tbody tr {
+      transition: background-color 0.3s ease;
+    }
+
+    .custom-table tbody tr:hover {
+      background-color: #f0f4ff;
+    }
+
+    .custom-table td {
+      padding: 15px;
+      vertical-align: middle;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+      margin-top: 50px;
+      box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    /* Icon Badges */
+    .icon-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50px;
+      margin: 5px;
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-section h1 {
+        font-size: 2.5rem;
+      }
+      
+      .content-card {
+        padding: 25px;
+      }
+      
+      .profile-box {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <!-- Header Section -->
+    <div class="header-section">
+      <div class="container">
+        <h1><i class="bi bi-person-circle"></i> Portofolio</h1>
+        <p class="subtitle">Andi Nurrizqah Hamdana | PTIK F</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Pengenalan Diri - FOTO KIRI, BIODATA KANAN -->
+      <div class="content-card">
+        <h2 class="section-title"><i class="bi bi-person-badge"></i> Pengenalan Diri</h2>
+        
+        <div class="row align-items-stretch g-4">
+          <!-- FOTO DI KIRI -->
+          <div class="col-md-6 col-lg-6">
+            <div class="profile-photo h-100 d-flex align-items-center justify-content-center">
+              <img src="Rizqah.jpg" alt="Foto Andi Nurrizqah Hamdana" class="img-fluid">
+            </div>
+          </div>
+          
+          <!-- BIODATA-->
+          <div class="col-md-6 col-lg-6">
+            <div class="profile-box">
+              <p><strong>Nama:</strong> Andi Nurrizqah Hamdana</p>
+              <p><strong>NIM:</strong> 240209501084</p>
+              <p><strong>Kelas:</strong> PTIK F</p>
+              <p><strong>Alamat:</strong> <mark>Jl. Mallengkeri Raya</mark></p>
+              <p><strong>Asal Sekolah:</strong> MAN 1 BONE</p>
+            </div>
+            
+            <div class="motto-box">
+              <i class="bi bi-quote" style="font-size: 2rem;"></i>
+              <p class="mt-3 mb-0">Apa yang kuusahakan hari ini, itu yang akan aku tuai nantinya</p>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="col-md-7">
-          <!-- Konten asli (tidak diubah) -->
-          <h2 class="text-center">Perkenalan Diri</h2>
-
-          <p><b>Nama</b>: Andi Nurrizqah Hamdana</p>
-          <p><b>NIM</b> : 240209501084</p>
-          <p><b>Kelas</b>: PTIK F</p>
-          <p><b>Alamat</b>: Jl. Mallengkeri Raya, <del>Desa Pakkasalo Kec.Sibulue Kab.Bone </del></p>
-          <p><b>Asal Sekolah</b> : MAN 1 BONE</p>
-          <p><b>Motto</b> :<pre> "Apa yang kuusahakan hari ini, itu yang akan aku tuai nantinya"</pre></p>
-
-          <h2 class="mt-4">Pengalaman</h2>
-          <p style="text-align: justify;">
+      <!-- Pengalaman -->
+      <div class="content-card">
+        <h2 class="section-title"><i class="bi bi-journal-text"></i> Pengalaman</h2>
+        <div class="experience-text">
+          <p>
             Sebuah pengalaman yang tak pernah terduga bisa berkuliah di jurusan sekarang ini dan mendapat kelas di PTIK F. 
             Di semester awal saya merasa kesulitan untuk adaptasi dengan lingkungan dan matkul yang dipelajari. 
             Kesulitan ini ada, mungkin salah satu alasannya karena background saya yang merupakan alumni Madrasah.
             Dan memang tidak ada planning untuk ambil jurusan ini.
             Tapi setelah menjalani semester satu dibersamai oleh teman-teman yang saling suport dan akhirnya saya bisa survive di dunia perkuliahan.
           </p>
-
-          <p style="text-align: justify;">
+          <p class="mt-3">
             Semester dua pun datang dengan berbagai tugasnya tetapi masih lebih ringan dibanding semester satu.
             Selama berkuliah di dua semester lalu terasa sangat singkat, mungkin rotasi bulan yang berputar begitu cepat yang menyebabkan perputaran jarumnya tak terasa.
             Oh iya, selama semester satu anak-anak PTIK berkuliah secara daring dikarenakan ruang belajar yang tidak ada.
             Tapi memasuki semester dua perkualihan mulai dilaksankan secara offline dan lokasinya di Lamacca.
             Vibes perkualihan lebih terasa selama offline karena bisa lebih banyak interaksi dengan teman-teman.
             Semoga semester tiga ini bisa terjalani dengan baik dan tuntas.
-            SEMANGAT KULIAH!!!
+            <strong>SEMANGAT KULIAH!!!</strong>
           </p>
-
         </div>
       </div>
 
-      <!-- sisanya: mata kuliah, dosen, tabel — tetap sama -->
-      <h2 class="mt-4">Daftar Mata Kuliah</h2>
-      <ol>
-        <li>Perkembangan Peserta Didik</li>
-        <li>Algoritma dan Pemrograman Dasar</li>
-        <li>Matematika</li>
-        <li>Pendidikan Agama Islam</li>
-        <li>Komunikasi Data</li>
-        <li>Elektronika Analog dan Digital</li>
-        <li>Komputer Grafis</li>
-        <li>Sistem Operasi</li>
-        <li>Belajar dan Pembelajaran</li>
-        <li>Basis Data</li>
-        <li>Pancasila</li>
-      </ol>
-
-      <h2 class="mt-4">Daftar Dosen</h2>
-      <ul>
-        <li>Alifya NFH, S.Pd., M.Pd</li>
-        <li>Kurnia Prima Wahyu, S.Pd., M.Pd.T</li>
-        <li>Dyah Darma Andayani, S.T., M.Tel.Eng.</li>
-        <li>Wahyu Hidayat M, S.Pd., M.Pd.</li>
-        <li>Haekal Febriansyah Ramadhan, S.T., M.T., M.Pd.</li>
-      </ul>
-      <h2 class="mt-4">Tabel</h2>
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <caption>Daftar Nama Kelompok</caption>
-          <thead>
-            <tr>
-              <th rowspan="2">No</th>
-              <th colspan="2">Nama</th>
-              <th rowspan="2">Jenis Kelamin</th>
-              <th rowspan="2">Alamat</th>
-              <th rowspan="2">Asal Sekolah</th>
-            </tr>
-            <tr>
-              <th>Lengkap</th>
-              <th>Panggilan</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Sinta Aulia</td>
-              <td>Sinta</td>
-              <td>Perempuan</td>
-              <td>Jl.Andi Djemma</td>
-              <td>SMA 7 Sinjai</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Fransisca Gabriela</td>
-              <td>Ela</td>
-              <td>Perempuan</td>
-              <td>Tidung</td>
-              <td>SMA 9 Makassar</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Athiya Najwa</td>
-              <td>Tiya</td>
-              <td>Perempuan</td>
-              <td>Jl.Malengkeri</td>
-              <td>SMA 3 Enrekang</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Nurhandayani</td>
-              <td>Nanda</td>
-              <td>Perempuan</td>
-              <td>Jl.Manuruki</td>
-              <td>SMK Takalar</td>
-            </tr>
-          </tbody>
-        </table>
+      <!-- Mata Kuliah Favorit -->
+      <div class="content-card">
+        <h2 class="section-title"><i class="bi bi-star-fill"></i> Mata Kuliah Favorit</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">Perkembangan Peserta Didik</li>
+              <li class="list-group-item">Struktur Data</li>
+              <li class="list-group-item">Algoritma dan Pemrograman Dasar</li>
+              <li class="list-group-item">Pemrograman Web</li>
+              <li class="list-group-item">Matematika Dasar</li>
+            </ol>
+          </div>
+        </div>
       </div>
 
-    <footer class="text-center mt-5 py-3 bg-dark text-white border-top border-primary">
-      &copy; 2025 Andi Nurrizqah Hamdana | 240209501084 | PTIK F
-    </footer>
+      <!-- Dosen -->
+      <div class="content-card">
+        <h2 class="section-title"><i class="bi bi-people-fill"></i> Dosen</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <i class="bi bi-person-check-fill text-primary"></i> Dyah Darma Andayani, S.T., M.Tel.Eng
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-person-check-fill text-primary"></i> Prof. Dr. Ir. Riana Tangkin Mangesa, M.T
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-person-check-fill text-primary"></i> Alifya NFH, S.Pd., M.Pd.
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-person-check-fill text-primary"></i> Wahyu Hidayat M, S.Pd., M.Pd.
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-person-check-fill text-primary"></i> Kurnia Wahyu Prima, S.Pd., M.Pd.T
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-person-check-fill text-primary"></i> Haekal Febriansyah Ramadhan, S.T., M.T., M.Pd.
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-person-check-fill text-primary"></i> Muhammad Romario Basirung, S.Pd., M.Pd.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+      <!-- Tabel -->
+      <div class="content-card">
+        <h2 class="section-title"><i class="bi bi-table"></i> Kelompok 1</h2>
+        <div class="table-responsive">
+          <table class="table custom-table">
+            <thead>
+              <tr>
+                <th rowspan="2">No</th>
+                <th colspan="2">Nama</th>
+                <th rowspan="2">Jenis Kelamin</th>
+                <th rowspan="2">Alamat</th>
+                <th rowspan="2">Asal Sekolah</th>
+              </tr>
+              <tr>
+                <th>Lengkap</th>
+                <th>Panggilan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Fransisca Gabriella</td>
+                <td>Ela</td>
+                <td>Perempuan</td>
+                <td>Jl. Tidung</td>
+                <td>SMAN 9 Makassar</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Uci Adityantikasari</td>
+                <td>Cici</td>
+                <td>Perempuan</td>
+                <td>Barombong</td>
+                <td>SMAN 1 Tawangsari</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Nurhandayani</td>
+                <td>Nanda</td>
+                <td>Perempuan</td>
+                <td>Jl. Mannuruki</td>
+                <td>SMKN 3 Takalar</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p> 2025 Andi Nurrizqah Hamdana | PTIK F</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

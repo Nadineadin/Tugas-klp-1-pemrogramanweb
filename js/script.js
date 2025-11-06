@@ -112,3 +112,12 @@ $("#feedbackForm").on("submit", function (e) {
   $(this).trigger("reset");
   setTimeout(() => $("#feedbackAlert").fadeOut(600), 3000);
 });
+
+// Efek tambahan: navbar berubah warna saat scroll
+$(window).on("scroll", function () {
+  if ($(this).scrollTop() > 50) {
+    $(".navbar").addClass("scrolled");
+  } else {
+    $(".navbar").removeClass("scrolled");
+  }
+});

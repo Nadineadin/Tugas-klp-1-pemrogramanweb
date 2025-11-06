@@ -151,3 +151,8 @@ footer {
     padding: 1.5rem;
   }
 }
+.navbar.scrolled {
+  background-color: #084298 !important; /* lebih gelap */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  transition: all 0.4s ease-in-out;
+}
